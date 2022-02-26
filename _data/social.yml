@@ -206,3 +206,7 @@ keybase:
 download:
   name: Download
   icon: icon-box-add
+web:
+  name: Web
+  icon: icon-earth
+  prepend: "https://"
