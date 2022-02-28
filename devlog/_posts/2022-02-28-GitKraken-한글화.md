@@ -4,7 +4,7 @@ title: GitKraken 한글화
 sitemap: false
 hide_last_modified: true
 image: 
-  path: /assets/img/blog/20220228/GitKraken_한글화_main.png
+  path: /devlog/images/GitKraken_한글화_main.png
   # srcset:
   #   1060w: /assets/img/blog/example-content-iii.jpg
   #   530w:  /assets/img/blog/example-content-iii@0,5x.jpg
