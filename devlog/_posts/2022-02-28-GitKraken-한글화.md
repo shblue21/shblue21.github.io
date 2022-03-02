@@ -3,6 +3,7 @@ layout: post
 title: GitKraken 한글화
 sitemap: false
 hide_last_modified: true
+comments: true
 image: 
   path: /devlog/images/GitKraken_한글화_main.png
   # srcset:
