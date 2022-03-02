@@ -32,7 +32,7 @@ description:           >
 tagline:               신변잡기 및 IT Knowledge 공유
 
 # A list of keywords for your blog
-keywords:              [RPA,GitKraken]
+keywords:              [RPA,GitKraken,Git,AWS,Azure,NCP,클라우드 자격증,Uipath,IoT]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
@@ -42,7 +42,7 @@ logo:                  /assets/img/logo.png
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:              지훈 김
+  name:              김지훈
   email:             jihunkimkw@gmail.com
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
