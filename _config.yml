@@ -140,6 +140,8 @@ defaults:
   - scope:
       type:            posts
     values:
+      seo:
+        type:          BlogPosting
       comments:        true
 
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
