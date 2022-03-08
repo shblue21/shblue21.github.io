@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GitKraken 한글화 지연
+# title: GitKraken 한글화 지연
 hide_last_modified: true
 # image: 
 #   path: /devlog/images/GitKraken_한글화_main.png
