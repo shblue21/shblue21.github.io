@@ -2,8 +2,8 @@
 layout: post
 title: GitKraken 한글패치 배포
 hide_last_modified: true
-# image: 
-#   path: /devlog/images/GitKraken_한글화_main.png
+image: 
+  path: /devlog/images/GitKraken_한글화_main.png
   # srcset:
   #   1060w: /assets/img/blog/example-content-iii.jpg
   #   530w:  /assets/img/blog/example-content-iii@0,5x.jpg
