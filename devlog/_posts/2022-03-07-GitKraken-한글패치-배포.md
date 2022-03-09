@@ -21,4 +21,6 @@ GitKraken 한글 패치를 Repo를 공개로 변경하였습니다.
 하기 Repo 참고부탁드립니다.  
 https://github.com/shblue21/gitkraken-korean
 
+한글 번역이 어느정도 진행된 이후에, Gitkraken 특화 기능도 가이드할 예정입니다. (Highlight, Workspace 등)
+
 감사합니다.  
