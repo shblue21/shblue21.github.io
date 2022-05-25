@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GitKraken 한글패치 배포
+title: GitKraken 한글화 배포
 hide_last_modified: true
 image: 
   path: /devlog/images/GitKraken_한글화_main.png
@@ -13,7 +13,7 @@ image:
 안녕하세요. 
 작년 12월부터 GitKraken 한글화 작업을 시작하였으며,
 
-GitKraken 한글 패치를 Repo를 공개로 변경하였습니다.
+GitKraken 한글화 저장소를 공개로 변경하였습니다.
 먼저 사용해보고 싶으신분은 참고 부탁드립니다.
 
 번역률은 30%입니다 (Json Key 기준)
