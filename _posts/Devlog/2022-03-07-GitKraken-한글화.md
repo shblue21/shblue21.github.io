@@ -2,9 +2,8 @@
 title: GitKraken 한글화
 date: 2022-03-07T16:20:02
 last_modified_at: 2016-03-07T16:20:02
-permalink: /categories/
 categories:
-  - Devlog
+  - Git
 tags:
   - git
   - gitkraken
