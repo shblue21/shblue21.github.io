@@ -1,17 +1,13 @@
 ---
 title: GitKraken 한글화
+date: 2022-03-07T16:20:02
+last_modified_at: 2016-03-07T16:20:02
 permalink: /categories/
 categories:
   - Devlog
 tags:
   - git
   - gitkraken
-image: 
-  path: /devlog/images/GitKraken_한글화_main.png
-  # srcset:
-  #   1060w: /assets/img/blog/example-content-iii.jpg
-  #   530w:  /assets/img/blog/example-content-iii@0,5x.jpg
-  #   265w:  /assets/img/blog/example-content-iii@0,25x.jpg
 ---
 
 
