@@ -1,6 +1,11 @@
 ---
 title: GitKraken 한글화
-hide_last_modified: false
+permalink: /categories/
+categories:
+  - Devlog
+tags:
+  - git
+  - gitkraken
 image: 
   path: /devlog/images/GitKraken_한글화_main.png
   # srcset:
