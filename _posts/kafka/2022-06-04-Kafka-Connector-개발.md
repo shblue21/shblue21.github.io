@@ -3,11 +3,11 @@ title: Kafka Connector 개발 (1/3)
 date: 2022-06-04T11:20:02
 last_modified_at: 2022-06-04T11:20:02
 categories:
-  - Devlog
+  - Kafka
 tags:
   - Kafka
 published: false
-  
+
 ---
 
 # 개요
