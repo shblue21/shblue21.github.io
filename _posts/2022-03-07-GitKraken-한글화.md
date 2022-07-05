@@ -1,7 +1,7 @@
 ---
 title: GitKraken 한글화
 date: 2022-03-07T16:20:02
-last_modified_at: 2016-03-07T16:20:02
+last_modified_at: 2022-07-05T16:20:02
 categories:
   - Git
 tags:
