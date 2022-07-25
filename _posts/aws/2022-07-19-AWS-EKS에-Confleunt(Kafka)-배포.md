@@ -3,9 +3,11 @@ title: AWS EKS에 Confluent(Kafka) 배포
 date: 2022-07-19T11:20:02
 last_modified_at: 2022-07-19T11:20:02
 categories:
-  - Devlog
+  - aws
 tags:
+  - AWS
   - Kafka
+  - EKS
 published: false
   
 ---
