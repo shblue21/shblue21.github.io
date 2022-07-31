@@ -27,7 +27,7 @@ WIP
 # Education & Certifications
 - Bachelor of Science in Computer Software Engineering at Kwangwoon University, Seoul, Korea (2011-2017)
 - Undergraduate researcher in Networking lab (2016-2017)
-  - Android PoC program development.(Crawling based)
+  - Android PoC App development.(Crawling based)
   - Assitant Survey paper writing.
 - Public Cloud Certification
   - [Azure DevOps Engineer Expert(AZ-400)](https://www.credly.com/badges/981de455-9de7-4731-b844-0e4f3fecf992)
