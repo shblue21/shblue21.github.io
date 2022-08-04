@@ -16,13 +16,17 @@ toc: true
 ## 이슈
 eks cluster에 대해 kubectl commands 실행시,  
 
- **'Unable to connect to the server: getting credentials: exec plugin is configured to use API version client.authentication.k8s.io/v1beta1, plugin returned version client.authentication.k8s.io/v1alpha1'**  
+``` bash
+  kubectl get pods
 
-**'Kubeconfig user entry is using deprecated API version client.authentication.k8s.io/v1alpha1. Run 'aws eks update-kubeconfig' to update.**' 
+  Unable to connect to the server: getting credentials: exec plugin is configured to use API version client.authentication.k8s.io/v1beta1, plugin returned version client.authentication.k8s.io/v1alpha1
+  or
+  Kubeconfig user entry is using deprecated API version client.authentication.k8s.io/v1alpha1. Run 'aws eks update-kubeconfig' to update.
+  or
+  invalid apiVersion client.authentication.k8s.io/v1alpha1
+```
 
-**invalid apiVersion client.authentication.k8s.io/v1alpha1**  
-
-등의 메세지 발생
+의 메세지 발생
 
 ## 해결방법 요약
 - AWS Cli 업데이트(최소 1.24.0)  
@@ -42,12 +46,12 @@ eks cluster에 대해 kubectl commands 실행시,
     - name: arn:aws:eks:ap-northeast-2:154462851762:cluster/conflunet-demo
       user:
         exec:
-          apiVersion: client.authentication.k8s.io/v1alpha1
+          apiVersion: client.authentication.k8s.io/v1alpha1 
           args:
           - --region
           - ap-northeast-2
           - eks
-          - get-token ## 이부분
+          - get-token ## aws eks get-token 으로 토큰을 가져온다.
           - --cluster-name
           - conflunet-demo
           command: aws
@@ -56,7 +60,7 @@ eks cluster에 대해 kubectl commands 실행시,
   // AWS EKS get-token API Docs
     {
     "kind": "ExecCredential",
-    "apiVersion": "client.authentication.k8s.io/v1beta1",
+    "apiVersion": "client.authentication.k8s.io/v1beta1", // apiVersion이 업데이트 되었다.
     "spec": {},
     "status": {
       "expirationTimestamp": "2019-08-14T18:44:27Z",
