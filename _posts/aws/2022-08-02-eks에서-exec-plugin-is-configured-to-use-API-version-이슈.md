@@ -30,16 +30,44 @@ eks cluster에 대해 kubectl commands 실행시,
 ![EKS_1](/img/220802_eksissue_1.png)   
 혹은 aws cli로 config 업데이트.  
 
-``` bash
-aws eks update-kubeconfig # 기존 config 및 클러스터 확인 후 업데이트
-``` 
 
 ## 상세
-1. K8s 인증이 동작 하는 방식.
-   1. WIP
-   2. 
-2. USER
+1. 에러 발생 이유.  
+  EKS는 User 인증을 위해 Bearer Token을 사용하는데, 이를 위해 eks get-token를 호출한다.  
+  K8s 1.24에서  **client.authentication.k8s.io/v1alpha1** 이 deprecated 되었고,
+  AWS도 이에 api version을 변경하였으나, .kubeconfig와 일치하지 않아 발생하는 문제이다.
+
+  ``` yaml
+    users:
+    - name: arn:aws:eks:ap-northeast-2:154462851762:cluster/conflunet-demo
+      user:
+        exec:
+          apiVersion: client.authentication.k8s.io/v1alpha1
+          args:
+          - --region
+          - ap-northeast-2
+          - eks
+          - get-token ## 이부분
+          - --cluster-name
+          - conflunet-demo
+          command: aws
+  ```
+  ``` javascript
+  // AWS EKS get-token API Docs
+    {
+    "kind": "ExecCredential",
+    "apiVersion": "client.authentication.k8s.io/v1beta1",
+    "spec": {},
+    "status": {
+      "expirationTimestamp": "2019-08-14T18:44:27Z",
+      "token": "k8s-aws-v1EXAMPLE_TOKEN_DATA_STRING..."
+    }
+  }
+  ```  
+2. K8s 인증 방법
+   WIP
 3. AWS eks get-token
+   WIP
 
 ## 참고
 
