@@ -74,7 +74,8 @@ Kubernetes 인증에 대한 자세한 설명은 생략한다. user 섹션에 API
         command: aws
 ```  
 **exec** 속성이 중요하다. 이 속성은 **client-go credential plugins** 라는 Go 클라이언트 라이브러리의 기능에 의해 제공되는데, 간단히 자격 증명을 생성하고 반환하는 외부 명령을 정의할 수 있다. (참고 : [client-go-credential-plugins](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#client-go-credential-plugins))  
-AWS EKS는 aws get-token 명령으로 자격 증명을 생성하고, 토큰을 가져온다. (aws-iam-authenticator도 사용 가능하다.)  
+
+AWS EKS는 aws get-token 명령으로 자격 증명을 생성하고, 토큰을 가져온다. (aws-iam-authenticator도 사용 가능)  
 
 구버전의 AWS Cli, 혹은 eksctl로 config를 생성한 경우, apiVersion이 **client.authentication.k8s.io/v1alpha1** 로 되어있으나. 1.24버전에서 제거 되었다.  
  
