@@ -41,6 +41,9 @@ eks cluster에 대해 kubectl commands 실행시,
   - 인증 : Webhook Token Authentication
   - 인가 : RBAC Authorization(Role-based access control  
 
+kubeconfig File
+
+
 1. 에러 발생 이유.  
   **aws eks get-token** 명령으로 Kubernetes 클러스터에 인증을 제공하기 위해, IAM을 사용한다.
   K8s 1.24에서  **client.authentication.k8s.io/v1alpha1** 이 Removed 되었고,
@@ -73,10 +76,6 @@ eks cluster에 대해 kubectl commands 실행시,
     }
   }
   ```  
-2. K8s 인증 방법
-   WIP
-3. AWS eks get-token
-   WIP
 
 ## 참고
 
