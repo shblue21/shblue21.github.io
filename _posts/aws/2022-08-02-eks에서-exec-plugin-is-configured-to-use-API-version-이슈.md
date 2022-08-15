@@ -1,7 +1,7 @@
 ---
 title: eks에서 exec plugin is configured to use API version 이슈
 date: 2022-08-02T00:20:02
-last_modified_at: 2022-08-12T00:20:02
+last_modified_at: 2022-08-14T00:20:02
 categories:
   - aws
 tags:
@@ -31,51 +31,70 @@ eks cluster에 대해 kubectl commands 실행시,
 
 ## 조치방법
 - AWS Cli 업데이트(최소 1.24.0)  
-- .kube/config 의 사용자/인증의 apiVersion 업데이트 **client.authentication.k8s.io/v1beta1**
-![EKS_1](/img/220802_eksissue_1.png)   
-혹은 aws cli로 config 업데이트.  
+- .kube/config 파일의 User섹션의 apiVersion 값을 **client.authentication.k8s.io/v1beta1** 로 업데이트  
+
+``` yaml
+  users:
+  - name: arn:aws:eks:$region_code:$account_id:cluster/$cluster_name
+    user:
+      exec:
+        ## apiVersion: client.authentication.k8s.io/v1alpha1 ## v1beta1로 업데이트
+        apiVersion: client.authentication.k8s.io/v1beta1
+```  
+혹은 aws eks update-kubeconfig 명령어를 실행하여 업데이트.  
 
 
 ## 상세
-  EKS에서 인증,인가를 처리 하는 방법
+### EKS 인증, 인가
   - 인증 : Webhook Token Authentication
-  - 인가 : RBAC Authorization(Role-based access control  
+  - 인가 : RBAC Authorization(Role-based access control)  
 
-kubeconfig File
+AWS에서 제공하는 웹훅 서비스(AWS IAM Authenticator)에 의해 Bearer token과 연동된다. 중요한 점은 이 Bearer 토큰에 AWS Identity and Access Management(IAM) 자격 증명이 포함되어 있습니다.  
+즉, 클라이언트는 **IAM 자격 증명**을 사용하여 EKS 클러스터에 인증합니다.  
 
+### KubeConfig 파일 ###  
+kubectl이나 기타 Tool로 EKS를 사용하기 위해, .kube/conifg 파일 생성하였을 것이다. 파일을 열어 EKS용 kubeconfig 을 확인한다.
 
-1. 에러 발생 이유.  
-  **aws eks get-token** 명령으로 Kubernetes 클러스터에 인증을 제공하기 위해, IAM을 사용한다.
-  K8s 1.24에서  **client.authentication.k8s.io/v1alpha1** 이 Removed 되었고,
-  AWS도 이에 api version을 변경하였으나, .kubeconfig와 일치하지 않아 발생하는 문제이다.
+> aws eks update-kubeconfig 혹은 eksctl create cluster 명령어를 실행할 때, eks용 kube config가 자동으로 생성된다.
 
-  ``` yaml
-    users:
-    - name: arn:aws:eks:ap-northeast-2:154462851762:cluster/conflunet-demo
-      user:
-        exec:
-          apiVersion: client.authentication.k8s.io/v1alpha1 
-          args:
-          - --region
-          - ap-northeast-2
-          - eks
-          - get-token ## aws eks get-token 으로 토큰을 가져온다.
-          - --cluster-name
-          - conflunet-demo
-          command: aws
-  ```
-  ``` javascript
-  // AWS EKS get-token API Docs
-    {
-    "kind": "ExecCredential",
-    "apiVersion": "client.authentication.k8s.io/v1beta1", // apiVersion이 업데이트 되었다.
-    "spec": {},
-    "status": {
-      "expirationTimestamp": "2019-08-14T18:44:27Z",
-      "token": "k8s-aws-v1EXAMPLE_TOKEN_DATA_STRING..."
-    }
+Kubernetes 인증에 대한 자세한 설명은 생략한다. user 섹션에 API 서버 인증을 위한 자격 증명이 정의되어 있다.
+``` yaml
+  users:
+  - name: arn:aws:eks:$region_code:$account_id:cluster/$cluster_name
+    user:
+      exec:
+        apiVersion: client.authentication.k8s.io/v1alpha1 
+        args:
+        - --region
+        - $region_code
+        - eks
+        - get-token ## aws eks get-token 으로 토큰을 가져온다.
+        - --cluster-name
+        - $cluster_name
+        command: aws
+```  
+**exec** 속성이 중요하다. 이 속성은 **client-go credential plugins** 라는 Go 클라이언트 라이브러리의 기능에 의해 제공되는데, 간단히 자격 증명을 생성하고 반환하는 외부 명령을 정의할 수 있다. (참고 : [client-go-credential-plugins](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#client-go-credential-plugins))  
+AWS EKS는 aws get-token 명령으로 자격 증명을 생성하고, 토큰을 가져온다. (aws-iam-authenticator도 사용 가능하다.)  
+
+구버전의 AWS Cli, 혹은 eksctl로 config를 생성한 경우, apiVersion이 **client.authentication.k8s.io/v1alpha1** 로 되어있으나. 1.24버전에서 제거 되었다.  
+ 
+### ExecCredential ###  
+인증에 성공시 [ExecCredential](https://kubernetes.io/docs/reference/config-api/client-authentication.v1beta1/#client-authentication-k8s-io-v1beta1-ExecCredential) 스펙으로 결과를 반환하며, 토큰을 사용하여 Kubernetes API에 대해 인증합니다. aws get-token 명령을 실행하면,
+
+``` javascript
+// AWS EKS get-token API Docs
+  {
+  "kind": "ExecCredential",
+  "apiVersion": "client.authentication.k8s.io/v1beta1", // apiVersion이 업데이트 되었다.
+  "spec": {},
+  "status": {
+    "expirationTimestamp": "2022-08-14T18:44:27Z",
+    "token": "k8s-aws-v1EXAMPLE_TOKEN_DATA_STRING..."
   }
-  ```  
+}
+```  
+apiVersion이 v1beta로 업데이트 되어 있다. **client-go credential plugins**은 Stable으로 정식 릴리즈가 되어 있다.(GA) 현재 apiVersion은 **client.authentication.k8s.io/v1** 이므로 추후 AWS Credential이 업데이트 될 경우 다시 apiVersion을 변경해줘야 할 수 있다.
+
 
 ## 참고
 
