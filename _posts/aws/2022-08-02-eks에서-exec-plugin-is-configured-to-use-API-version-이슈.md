@@ -11,7 +11,7 @@ tags:
   - kubectl
 toc: true  
 ---
-> client.authentication.k8s.io/v1alpha1 가 Removed 되었으므로 v1beta1을 사용해야 한다.
+> client.authentication.k8s.io/v1alpha1 가 Removed 되었으므로 v1beta1로 변경해야 한다.
 
 ## 이슈
 eks cluster에 대해 kubectl commands 실행시,  
@@ -29,7 +29,7 @@ eks cluster에 대해 kubectl commands 실행시,
 
 의 메세지 발생
 
-## 해결방법 요약
+## 조치방법
 - AWS Cli 업데이트(최소 1.24.0)  
 - .kube/config 의 사용자/인증의 apiVersion 업데이트 **client.authentication.k8s.io/v1beta1**
 ![EKS_1](/img/220802_eksissue_1.png)   
@@ -37,6 +37,10 @@ eks cluster에 대해 kubectl commands 실행시,
 
 
 ## 상세
+  EKS에서 인증,인가를 처리 하는 방법
+  - 인증 : Webhook Token Authentication
+  - 인가 : RBAC Authorization(Role-based access control  
+
 1. 에러 발생 이유.  
   **aws eks get-token** 명령으로 Kubernetes 클러스터에 인증을 제공하기 위해, IAM을 사용한다.
   K8s 1.24에서  **client.authentication.k8s.io/v1alpha1** 이 Removed 되었고,
