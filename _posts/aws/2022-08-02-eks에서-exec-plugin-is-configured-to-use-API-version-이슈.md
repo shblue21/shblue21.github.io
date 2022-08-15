@@ -49,8 +49,8 @@ eks cluster에 대해 kubectl commands 실행시,
   - 인증 : Webhook Token Authentication
   - 인가 : RBAC Authorization(Role-based access control)  
 
-AWS에서 제공하는 웹훅 서비스(AWS IAM Authenticator)에 의해 Bearer token과 연동된다. 중요한 점은 이 Bearer 토큰에 AWS Identity and Access Management(IAM) 자격 증명이 포함되어 있습니다.  
-즉, 클라이언트는 **IAM 자격 증명**을 사용하여 EKS 클러스터에 인증합니다.  
+AWS에서 제공하는 웹훅 서비스(AWS IAM Authenticator)에 의해 Bearer token과 연동된다. 이 Bearer 토큰에 AWS Identity and Access Management(IAM) 자격 증명이 포함되어 있다. 
+즉, 클라이언트는 **IAM 자격 증명**을 사용하여 EKS 클러스터에 인증한다.  
 
 ### KubeConfig 파일 ###  
 kubectl이나 기타 Tool로 EKS를 사용하기 위해, .kube/conifg 파일 생성하였을 것이다. 파일을 열어 EKS용 kubeconfig 을 확인한다.
@@ -93,7 +93,8 @@ AWS EKS는 aws get-token 명령으로 자격 증명을 생성하고, 토큰을 �
   }
 }
 ```  
-apiVersion이 v1beta로 업데이트 되어 있다. **client-go credential plugins**은 Stable으로 정식 릴리즈가 되어 있다.(GA) 현재 apiVersion은 **client.authentication.k8s.io/v1** 이므로 추후 AWS Credential이 업데이트 될 경우 다시 apiVersion을 변경해줘야 할 수 있다.
+apiVersion이 v1beta로 업데이트 되어 있다. **client-go credential plugins**은 Stable으로 정식 릴리즈가 되어 있다.(GA)  
+현재 apiVersion은 **client.authentication.k8s.io/v1** 이므로 추후 AWS Credential이 업데이트 될 경우 동일한 문제가 발생할 수 있다.
 
 
 ## 참고
