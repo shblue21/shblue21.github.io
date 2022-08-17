@@ -25,8 +25,8 @@ WIP
   - RPA Consulting and Development
 
 # Education & Certifications
-- Bachelor of Science in Computer Software Engineering at Kwangwoon University, Seoul, Korea (2011-2017)
-- Undergraduate researcher in Networking lab (2016-2017)
+- Bachelor of Science in Computer Software Engineering at Kwangwoon University, Seoul, Korea
+- Undergraduate researcher in Networking lab
   - Android PoC App development.(Crawling based)
   - Assitant Survey paper writing.
 - Public Cloud Certification
