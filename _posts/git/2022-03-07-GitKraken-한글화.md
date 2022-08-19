@@ -1,7 +1,7 @@
 ---
 title: GitKraken 한글화
 date: 2022-03-07T16:20:02
-last_modified_at: 2022-07-24T16:20:02
+last_modified_at: 2022-08-18T16:20:02
 categories:
   - Git
 tags:
@@ -10,7 +10,7 @@ tags:
 ---
 
 안녕하세요.  
-작년 12월부터 GitKraken 한글화 작업을 시작하였으며,
+작년 12월부터 GitKraken(깃 크라켄) 한글화 작업을 시작하였으며,
 
 
 GitKraken 한글화 저장소를 공개로 변경하였습니다.  
