@@ -19,16 +19,16 @@ AWS 공인 인증 시험의 경우, Foundational - Associcate - Professional 의
 하기에 설명했지만, **09월 30일**까지 등록 해야 하므로, 일단 등록하길 권장한다.(사용은 별개)
 
 ## 등록방법
-1. [Cloud Practitioner Challenge](https://pages.awscloud.com/GLOBAL-ln-GC-TrainCert-Cloud-Practitioner-Challenge-2022-reg.html) 에 접속하여, 챌린지를 등록한다.  
+1. [Cloud Practitioner Challenge](https://pages.awscloud.com/GLOBAL-ln-GC-TrainCert-Cloud-Practitioner-Challenge-2022-reg.html) 에 접속하여, Challenge를 등록한다.  
 ![Exam001](/img/220823_AWSExam_1.png){: width="70%" height="70%"}
-2. 이메일로 Voucher를 수신한다  
-(챌린지 등록메일은 즉시 받을 수 있으나, 바우처 코드는 1~2일 이후 메일이 온다.)  
+2. 이메일로 바우처를 수신한다  
+(Challenge 등록 메일은 즉시 받을 수 있으나, 바우처 코드는 1~2일 이후 온다.)  
 ![Exam002](/img/220823_AWSExam_2.png){: width="70%" height="70%"}
-3. **PSI**로 시험을 신청하며,(Pearson Vue가 아님) Voucher 코드를 입력한다.  
+3. **PSI**로 시험을 신청하며,(Pearson Vue가 아님) 바우처 코드를 입력한다.  
 ![Exam003](/img/220823_AWSExam_3.png)
 
 ## 주의사항
-- 50% 할인 받으려면, PSI에서 시험을 예약해야 함.
+- 50% 할인 받으려면, **PSI**에서 시험을 예약해야 함.
 - Global Challenge에 등록 가능한 날짜는 **2022년 09월 30일** 까지임.
 - 그러나 바우처를 이용한 시험예약은 **2022년 12월 14일** 까지 가능함(바우처 사용기한)
 - 등록한 후 Challenge 정보는 메일로 송부됨, **바우처 코드는 1~2일** 정도 소요됨.
