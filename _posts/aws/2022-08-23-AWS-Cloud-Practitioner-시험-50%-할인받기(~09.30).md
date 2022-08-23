@@ -8,7 +8,7 @@ tags:
   - AWS
 toc: true  
 ---
-> [Cloud Practitioner Challenge]를 등록하고 50% 할인 바우처를 받을 수 있다.(https://pages.awscloud.com/GLOBAL-ln-GC-TrainCert-Cloud-Practitioner-Challenge-2022-reg.html)
+> [Cloud Practitioner Challenge](https://pages.awscloud.com/GLOBAL-ln-GC-TrainCert-Cloud-Practitioner-Challenge-2022-reg.html)를 등록하고 50% 할인 바우처를 받을 수 있다.
 
 AWS 공인 인증 시험의 경우, Foundational - Associcate - Professional 의 순으로 로드맵이 있으며,  
 시험 합격시 다음 단계의 시험을 50% 할인해서 볼 수 있다.  
@@ -19,9 +19,13 @@ AWS 공인 인증 시험의 경우, Foundational - Associcate - Professional 의
 하기에 설명했지만, **09월 30일**까지 등록 해야 하므로, 일단 등록하길 권장한다.(사용은 별개)
 
 ## 등록방법
-1. [Cloud Practitioner Challenge](https://pages.awscloud.com/GLOBAL-ln-GC-TrainCert-Cloud-Practitioner-Challenge-2022-reg.html) 에 접속하여, 챌린지를 등록한다.
-2. 이메일로 Voucher를 수신한다(챌린지 등록메일은 즉시 받을 수 있으나, 바우처 코드는 1~2일정도 소요된다.)
-3. PSI로 시험을 예약한다.
+1. [Cloud Practitioner Challenge](https://pages.awscloud.com/GLOBAL-ln-GC-TrainCert-Cloud-Practitioner-Challenge-2022-reg.html) 에 접속하여, 챌린지를 등록한다.  
+![Exam001](/img/220823_AWSExam_1.png){: width="70%" height="70%"}
+2. 이메일로 Voucher를 수신한다  
+(챌린지 등록메일은 즉시 받을 수 있으나, 바우처 코드는 1~2일 이후 메일이 온다.)  
+![Exam002](/img/220823_AWSExam_2.png){: width="70%" height="70%"}
+3. **PSI**로 시험을 신청하며,(Pearson Vue가 아님) Voucher 코드를 입력한다.  
+![Exam003](/img/220823_AWSExam_3.png)
 
 ## 주의사항
 - 50% 할인 받으려면, PSI에서 시험을 예약해야 함.
