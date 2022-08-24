@@ -1,5 +1,5 @@
 ---
-title: AWS Cloud Practitioner 시험 50% 할인받기(~09/30)
+title: AWS Cloud Practitioner 시험 할인받기
 date: 2022-08-23T00:00:00
 last_modified_at: 2022-08-23T00:00:00
 categories:
