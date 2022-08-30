@@ -8,7 +8,6 @@ tags:
   - git
   - gitkraken
 lang: ko
-ref: gktrnas
 ---
 
 안녕하세요.  
