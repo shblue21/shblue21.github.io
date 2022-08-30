@@ -7,6 +7,7 @@ categories:
 tags:
   - AWS
 toc: true  
+lang: ko
 ---
 > [Cloud Practitioner Challenge](https://pages.awscloud.com/GLOBAL-ln-GC-TrainCert-Cloud-Practitioner-Challenge-2022-reg.html)를 등록하고 50% 할인 바우처를 받을 수 있다.
 

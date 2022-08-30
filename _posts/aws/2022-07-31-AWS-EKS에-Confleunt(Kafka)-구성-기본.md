@@ -10,6 +10,7 @@ tags:
   - Confluent
   - Kafka
 toc: true  
+lang: ko
 ---
 
 ## 개요

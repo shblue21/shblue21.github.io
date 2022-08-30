@@ -6,6 +6,7 @@ categories:
   - Kafka
 tags:
   - Kafka
+lang: ko
 published: false
 
 ---
