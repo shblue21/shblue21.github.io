@@ -10,6 +10,7 @@ tags:
   - Kubernetes
   - kubectl
 toc: true  
+lang: ko
 ---
 > client.authentication.k8s.io/v1alpha1 가 Removed 되었으므로 v1beta1로 변경해야 한다.
 

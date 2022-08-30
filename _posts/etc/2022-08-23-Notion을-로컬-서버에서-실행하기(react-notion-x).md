@@ -7,5 +7,6 @@ categories:
 tags:
   - Kubernetes
 toc: true  
+lang: ko
 published: false
 ---

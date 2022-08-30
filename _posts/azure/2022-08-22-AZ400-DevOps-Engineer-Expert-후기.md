@@ -7,6 +7,7 @@ categories:
 tags:
   - Azure
 toc: true  
+lang: ko
 published: false
 ---
 > 
