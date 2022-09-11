@@ -32,6 +32,7 @@ WIP
 - Public Cloud Certification
   - [Azure DevOps Engineer Expert(AZ-400)](https://www.credly.com/badges/981de455-9de7-4731-b844-0e4f3fecf992)
   - [Azure Developer Associate(AZ-204)](https://www.credly.com/badges/90bd4c1c-2a46-4e0c-8990-0d89635b33e0)
+  - [AWS Certified Cloud Practitioner](https://www.credly.com/badges/49083ebd-a9f2-4e48-863f-01f406cee61c)
   - NAVER Cloud PlatformCertified Professional(NCA-200)
   - NAVER Cloud Platform Associate(NCA-100)
 
