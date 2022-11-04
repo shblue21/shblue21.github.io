@@ -29,6 +29,7 @@ Challenge를 등록하는것 만으로도 **50%** 할인 바우처(쿠폰)을 �
 ## 할인받을 수 있는 Specialty 시험목록
 - AWS Certified Machine Learning - Specialty  
 - AWS Certified Data Analytics - Specialty  
+- AWS Certified Database - Specialty
 - AWS Certified Advanced Networking - Specialty
 - AWS Certified Security - Specialty
 - AWS Certified SAP on AWS - Specialty
