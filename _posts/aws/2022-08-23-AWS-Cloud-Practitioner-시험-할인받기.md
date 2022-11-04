@@ -1,7 +1,7 @@
 ---
 title: AWS Cloud Practitioner 시험 할인받기
 date: 2022-08-23T00:00:00
-last_modified_at: 2022-08-23T00:00:00
+last_modified_at: 2022-11-04T00:00:00
 categories:
   - aws
 tags:
@@ -9,6 +9,9 @@ tags:
 toc: true  
 lang: ko
 ---
+챌린지가 종료되었습니다. Speciality 챌린지가 진행중입니다. [링크](../AWS-SPECIALTY-시험-할인받기(~22.12.16))  
+{: .notice}
+
 > [Cloud Practitioner Challenge](https://pages.awscloud.com/GLOBAL-ln-GC-TrainCert-Cloud-Practitioner-Challenge-2022-reg.html)를 등록하고 50% 할인 바우처를 받을 수 있다.
 
 AWS 공인 인증 시험의 경우, Foundational - Associcate - Professional 의 순으로 로드맵이 있으며,  
