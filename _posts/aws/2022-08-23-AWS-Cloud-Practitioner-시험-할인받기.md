@@ -18,7 +18,7 @@ AWS 공인 인증 시험의 경우, Foundational - Associcate - Professional 의
 시험 합격시 다음 단계의 시험을 50% 할인해서 볼 수 있다.  
 
 그러나 Foundatinoal 시험인 **AWS Cloud Practitioner**(CLF-C01) 시험의 경우 할인 받기 쉽지 않은데,  
-금번 Challenge를 통해 **50%** 할인 받을 수 있어, 소개하고자 한다.
+금번 Challenge를 통해 **50%** 자격증 시험을 할인 받을 수 있어, 소개하고자 한다.
 
 하기에 설명했지만, **09월 30일**까지 등록 해야 하므로, 일단 등록하길 권장한다.(사용은 별개)
 
