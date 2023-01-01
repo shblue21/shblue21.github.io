@@ -12,7 +12,8 @@ lang: ko
 ---
 
 ## TL;DR
-Remote Server Protocol UI 확장의 java home을(rsp-ui.rsp.java.home) 설정해준다.(기존 java home이 설정되어 있어도, 확장의 java home을 설정해줘야 함.)  
+Remote Server Protocol UI 확장의 java home을(rsp-ui.rsp.java.home) 설정해준다.  
+(기존 java home이 설정되어 있어도, 확장의 java home을 설정해줘야 함.)  
 ![Setting](../../img/230101_rsp_error_1.png)
 
 

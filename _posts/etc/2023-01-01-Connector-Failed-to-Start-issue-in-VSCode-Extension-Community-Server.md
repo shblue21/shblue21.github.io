@@ -13,7 +13,8 @@ lang: en
 > ❗ Translations provided by machine translation.  
 
 ## TL;DR
-Sets the java home (rsp-ui.rsp.java.home) of the Remote Server Protocol UI extension. (Even if the existing java home is set, the extension's java home must be set.)  
+Sets the java home (rsp-ui.rsp.java.home) of the Remote Server Protocol UI extension.  
+(Even if the existing java home is set, the extension's java home must be set.)  
 ![Setting](../../img/230101_rsp_error_1.png)
 
 
