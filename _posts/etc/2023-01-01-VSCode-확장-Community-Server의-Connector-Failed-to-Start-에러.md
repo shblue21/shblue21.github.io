@@ -27,6 +27,7 @@ VSCode 확장인 Remote Server Protocol UI를 사용하다가 Connector Failed t
 > typeerror: cannot read properties of undefined (reading 'map')  
 
 상세한 에러메세지가 없어, 직접 디버그 하였는데.  
+
 Java 경로 설정시 'rsp-ui.rsp.java.home' 에서 설정하지 않는 경우  
 시스템 환경변수 혹은 VSCode 설정에서 JAVA_HOME을 가져오는데,  
 이때, \를 escape 해주지 않아서 발생하는 문제였다.
