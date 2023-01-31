@@ -35,5 +35,6 @@ WIP
   - [AWS Certified Cloud Practitioner](https://www.credly.com/badges/49083ebd-a9f2-4e48-863f-01f406cee61c)
   - NAVER Cloud PlatformCertified Professional(NCA-200)
   - NAVER Cloud Platform Associate(NCA-100)
-
+- Etc Certification
+  - [Certified Kubernetes Application Developer (CKAD)](https://www.credly.com/badges/0c7a7264-dbc4-47cb-bfb0-4ae2bb754c6f)
 
