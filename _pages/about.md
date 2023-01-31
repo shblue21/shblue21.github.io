@@ -3,7 +3,7 @@ permalink: /about/
 title: "About"
 layout: single
 author_profile: true
-last_modified_at: 2022-05-27T11:59:26-04:00
+last_modified_at: 2023-01-30T11:59:59
 ---
 
 Hi! I am I'm a Application Architect 👨‍💻 in Seoul, Korea 🚀.  
