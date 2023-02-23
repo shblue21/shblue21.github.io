@@ -10,7 +10,6 @@ tags:
 toc: true
 lang: ko
 ---
-> ❗ Translations provided by machine translation.  
 
 AWS 컴퓨팅 서비스를 사용하는 경우, AWS에 최적화된 Amazon Linux를 사용하고 있을 텐데요.  
 2021년부터 Amazon Linux 2022개발이 시작되어, 현재 RC3.1까지 출시되어 곧 GA가 출시될 예정입니다.
