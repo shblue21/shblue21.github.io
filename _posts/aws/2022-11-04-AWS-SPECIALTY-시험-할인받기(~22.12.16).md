@@ -9,6 +9,8 @@ tags:
 toc: true  
 lang: ko
 ---
+챌린지가 종료되었습니다.  
+{: .notice}
 > [Specialty Certification Challenge 2022](https://pages.awscloud.com/GLOBAL-ln-GC-TrainCert-Specialty-Certification-Challenge-2022-reg.html)에 등록하고 50% 할인 바우처를 받을 수 있다.
 
 이전글과 마찬가지로 SPECIALTY 자격증 시험에 대해 50% 할인 바우처를 받을 수 있다.  
