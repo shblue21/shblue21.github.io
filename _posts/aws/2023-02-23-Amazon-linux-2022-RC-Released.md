@@ -12,6 +12,7 @@ lang: en
 ---
 
 > ❗ Translations provided by machine translation.  
+> changed to AL2022 -> AL2023 on March 2. The release cycle also changed to every two years starting in 2023.
 
 If you use AWS compute services, you're probably using Amazon Linux optimized for AWS.  
 Development on Amazon Linux 2022 began in 2021, and it's now up to RC3.1, with GA coming soon.
