@@ -1,7 +1,7 @@
 ---
 title: Amazon Linux 2022 RC Released
 date: 2023-02-23T00:00:00
-last_modified_at: 2023-02-23T00:00:00
+last_modified_at: 2023-03-13T00:00:00
 categories:
   - aws
 tags:
