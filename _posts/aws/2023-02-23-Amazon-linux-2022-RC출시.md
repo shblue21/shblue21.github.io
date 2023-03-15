@@ -1,7 +1,7 @@
 ---
 title: Amazon linux 2022 RC 출시
 date: 2023-02-23T00:00:00
-last_modified_at: 2023-03-13T00:00:00
+last_modified_at: 2023-03-14T00:00:00
 categories:
   - aws
 tags:
@@ -10,6 +10,7 @@ tags:
 toc: true
 lang: ko
 ---
+> Amazon Linux 2022의 이름이 변경되었습니다.
 > 3월 2일에 AL2022 -> AL2023으로 변경되었습니다. 릴리즈 주기도 2023년부터 2년마다로 변경되었습니다.
 
 AWS 컴퓨팅 서비스를 사용하는 경우, AWS에 최적화된 Amazon Linux를 사용하고 있을 텐데요.  

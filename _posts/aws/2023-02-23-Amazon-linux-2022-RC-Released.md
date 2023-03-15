@@ -1,7 +1,7 @@
 ---
 title: Amazon Linux 2022 RC Released
 date: 2023-02-23T00:00:00
-last_modified_at: 2023-03-13T00:00:00
+last_modified_at: 2023-03-14T00:00:00
 categories:
   - aws
 tags:
@@ -12,6 +12,7 @@ lang: en
 ---
 
 > ❗ Translations provided by machine translation.  
+> Amazon Linux 2022 has been renamed.
 > changed to AL2022 -> AL2023 on March 2. The release cycle also changed to every two years starting in 2023.
 
 If you use AWS compute services, you're probably using Amazon Linux optimized for AWS.  
