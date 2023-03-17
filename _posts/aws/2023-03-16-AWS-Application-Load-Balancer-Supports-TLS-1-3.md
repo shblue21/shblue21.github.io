@@ -13,6 +13,7 @@ toc: true
 lang: ko
 ---
 
+> **Not applied to all regions.**
 > ❗ Translations provided by machine translation.
 
 Finally, AWS Application Load Balancer supports TLS 1.3.  
