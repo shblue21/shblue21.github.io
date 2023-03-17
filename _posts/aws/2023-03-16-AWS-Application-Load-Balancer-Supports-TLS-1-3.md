@@ -8,6 +8,7 @@ tags:
   - AWS
   - Amazon Linux
   - Load Balancer
+  - alb
 toc: true
 lang: ko
 ---
