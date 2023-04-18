@@ -10,6 +10,7 @@ tags:
 toc: true  
 lang: en
 ---
+> Ihis Issue is resolved in the latest version of the extension: [link](https://github.com/redhat-developer/rsp-server-community/issues/152)  
 > ❗ Translations provided by machine translation.  
 
 ## TL;DR
