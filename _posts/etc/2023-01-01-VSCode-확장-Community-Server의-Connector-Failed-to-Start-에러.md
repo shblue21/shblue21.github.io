@@ -10,6 +10,7 @@ tags:
 toc: true  
 lang: ko
 ---
+> 조치되었습니다. [링크](https://github.com/redhat-developer/rsp-server-community/issues/152)
 
 ## TL;DR
 Remote Server Protocol UI 확장의 java home을(rsp-ui.rsp.java.home) 설정해준다.  
