@@ -1,5 +1,5 @@
 ---
-title: How to install Elastic APM for Java-application
+title: How to install Elastic APM for Java application
 date: 2023-07-21T00:00:00
 last_modified_at: 2023-07-21T00:00:00
 categories:
