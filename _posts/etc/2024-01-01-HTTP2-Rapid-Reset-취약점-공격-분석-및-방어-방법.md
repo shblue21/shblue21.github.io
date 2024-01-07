@@ -40,6 +40,7 @@ Rapid Reset 취약점은 HTTP2 프로토콜의 취약점으로, **RST_STREAM** �
 \[그림2\] HTTP/2 Multiplexing
 {: .text-center}
 HTTP/1.1에서는 각 요청이 **순차적**으로 처리됩니다. 서버는 요청을 읽고 처리하고, 응답을 보낸 후, 다음 요청을 읽고 처리합니다. 이는 **단일** 연결을 통해 전송할 수 있는 요청의 속도가 왕복 1건이라는 것을 의미합니다. (이미지 참고)  
+
 이러한 제약으로 인해 클라이언트와 서버에서 처리량을 높이기 위해 HTTP/1.1 파이프라이닝(pipelining)을 사용할 수 있지만,  
 대부분의 브라우저에서 올바르게 구현하는 것이 어려워 파이프라이닝 설정은 비활성화되어 있습니다. [Stackoverflow 링크](https://stackoverflow.com/questions/30477476/why-is-pipelining-disabled-in-modern-browsers)
 
@@ -62,6 +63,7 @@ HTTP/1.1에서는 요청이 순차적으로 처리되지만, HTTP/2에서는 요
 
 #### RST_STREAM
 `RST_STREAM`은 HTTP/2의 프레임 중 하나로, 스트림을 종료하고 해당 스트림에 대한 모든 프레임을 무시하도록 수신자에게 알리는 프레임입니다.  
+
 위에서 보듯 여러 개의 스트림중 하나의 스트림에 대해 `RST_STREAM`을 보내면 해당 스트림은 종료되고, 해당 스트림에 대한 모든 프레임은 무시됩니다.  
   
 ![RST_STREAM ERROR CODE](../../img/240101_RapidReset_5.png){: .align-center}
@@ -100,6 +102,7 @@ WIP -->
 ### 퍼블릭 클라우드  
 Cloudflare, GCP, Azure, AWS에서 발행한 Rapid Reset 공격 대응 방안을 확인하였는데요.  
 결국 엣지 로케이션의 용량을 증설하였으니, 클라우드 벤더사에서 제공하는 Apllication Load Balancer를 사용하거나  
+
 Cloud Armor, AWS WAF, Azure WAF등의 웹 방화벽을 사용하여 DDoS를 L7 레벨에서 방어하라는 내용이 대부분입니다.
 
 웹 방화벽 없이 LB만 사용하는 경우, 각 클라우드 공급자들이 실제로 어떻게 대응하고 있는지 공개된 자료는 많지 않습니다.  
@@ -130,6 +133,7 @@ L7 로드밸런서 뒷단에 웹 서버를 두고 리버스 프록시로 사용�
 
 웹 서버 종류별로 영향을 받지 않거나, 패치 혹은 설정을 변경하여 대응할 수 있습니다.  
 웹 서버별 대응 방안을 아래애 정리하였으니 참고하시기 바랍니다.  
+
 다만 하기 대응방안 대부분은 **DDoS 공격** 자체를 완화하는 것은 아닙니다.  
 (`RST_STREAM` 으로 인한 취약점을 완화 할뿐, DDoS를 막으려면 별도의 방화벽이나 WEB서버에서 제공하는 DDoS 방어 기능을 사용해야 합니다.)
 
@@ -140,32 +144,36 @@ L7 로드밸런서 뒷단에 웹 서버를 두고 리버스 프록시로 사용�
 
 Apache는 Rapid Reset 취약점에 영향을 받지 않습니다. HTTP2 요청시 클라이언트의 요청에 따라 서버의 모든 리소스를 할당하지 않는 로직이 있습니다.
 
-HTTP2를 구현할 떄, 처음 6개의 요청만 처리하게 구현되어 있습니다.  
-(6개인 이유는 HTTP1.1의 병렬 요청과 같은 숫자이며, HTTP1.1에서 2로 마이그레이션 하는 것을 고려한 것입니다.)  
+Apache는 HTTP2를 구현할 떄, 처음 6개의 요청만 처리하게 구현되어 있습니다.  
+(6개인 이유는 HTTP1.1의 병렬 요청과 같은 숫자이며, HTTP1.1에서 2로 마이그레이션 하는 것을 고려)  
+
 클라이언트의 요청에 정상적으로 응답하게 되면 처리가능 요청의 개수는 점차 증가합니다.(TCP의 Window Size와 비슷한 개념)  
+
 이 떄 RST_STREAM을 통해 요청을 취소하면, 처리가능 요청의 개수가 증가하지 않아, 요청을 무한정 처리할 수 없게 됩니다.  
 
 **다만** Rapid Reset으로 유발된 다른 취약점(CVE-2023-45802) 떄문에 업데이트 해야합니다.  
 클라이언트가 요청을 취소하는 경우(RST_STREAM을 전송), 드물게 요청에 따른 메모리가 즉시 해제 되지 않는 버그가 있습니다.
 
-mod_http2 모듈은 C언어로 작성된 `nghttp2` 라이브러리를 사용하는데요.
-nghttp2 **1.57** 이상 버전을 사용하여 컴파일하거나, Apache 2.4.58(nghttp 1.57 라이브러리 사용 버전) 이상 버전으로 업데이트하면 해결됩니다.
+mod_http2 모듈은 C언어로 작성된 `nghttp2` 라이브러리를 사용하는데요.  
+nghttp2 **1.57** 이상 버전을 사용하여 컴파일하거나, Apache 2.4.58(nghttp 1.57 라이브러리 사용 버전) 이상 버전으로 업데이트하면 해결됩니다.  
 또한 nghttp 1.57 버전은 CVE-2023-45802 취약점을 해결한 버전입니다. [nghttp2 링크](https://github.com/nghttp2/nghttp2/releases/tag/v1.57.0)
 
 #### Nginx
 > Nginx를 최신버전 1.25.3으로 업데이트 합니다.  
+
 Nginx도 기본적으로 큰 영향을 받지 않으나, 1.25.3 버전에서 취약점을 해결하였습니다. (하나의 Event Loop에서 동시에 처리할 수 있는 요청의 개수를 제한하는 로직)  
 다만 성능향상을 위해 하기 값을 조정 하였다면, 값을 기본으로 변경하는 것을 권장합니다.  
 
-추가로 하기 값들을 참고하시기 바랍니다.
+추가로 하기 속성들은 HTTP/2와 Rapid Reset 공격에 직접적인 Nginx 속성입니다.
+참고하시기 바랍니다.
 
-`keepalive_requests` 기본값인 1000으로 유지.
-`http2_max_concurrent_streams` 기본값인 128개의 스트림으로 유지
-`limit_conn` 값으로 단일 클라이언트에서 처리할 수 있는 요청 수를 제한하는 지시문을 추가할 수 있습니다(ngx_http_limit_conn_module 모듈)
-`limit_req` 마찬가지로 단일 클라이언트로부터 주어진 시간 내에 처리할 요청 수에 제한을 적용합니다. (ngx_http_limit_req_module 모듈)
+- `keepalive_requests` 기본값인 1000으로 유지.
+- `http2_max_concurrent_streams` 기본값인 128개의 스트림으로 유지
+- `limit_conn` 값으로 단일 클라이언트에서 처리할 수 있는 요청 수를 제한하는 지시문을 추가할 수 있습니다(ngx_http_limit_conn_module 모듈)
+- `limit_req` 마찬가지로 단일 클라이언트로부터 주어진 시간 내에 처리할 요청 수에 제한을 적용합니다. (ngx_http_limit_req_module 모듈)
 
 #### LiteSpeed
-LightSpeed라는 웹서버가 생소하실 수 있는데요, 2023년 기준 4위의 웹서버입니다. (개인적으로 http3를 빨리 써보고 싶어서 nginx에서 LiteSpeed로 변경하였습니다.)  
+LightSpeed라는 웹서버가 생소하실 수 있는데요, 2023년 기준 4위의 웹서버입니다. (개인적으로 http3를 써보고 싶어서 nginx에서 LiteSpeed로 변경한 경험이 있습니다)
 LightSpeed는 HTTP/2 Rapid Reset 취약점에 영향을 받지 않습니다.  
 [LightSpeed 링크](https://blog.litespeedtech.com/2023/10/11/rapid-reset-http-2-vulnerablilty/)
 문서에 따르면 LightSpeed는 스트림을 처리하기 위한 우선순위 큐를 사용하고, 이 큐는 한번에 최대 100개의 스트림을 처리할 수 있습니다.
@@ -175,14 +183,22 @@ HAProxy는 HTTP/2 Rapid Reset 취약점에 대해 영향을 받지 않습니다.
 2018년에 배포된 Haproxy 1.9 버전 이상을 사용하고 있다면 우려할 필요가 없습니다.  
 [HAProxy 링크](https://www.haproxy.com/blog/haproxy-is-not-affected-by-the-http-2-rapid-reset-attack-cve-2023-44487)
 
-HAProxy는 HTTP/2 스트림을 처리할 때, 스트림 개수 기반이 아닌 스트림으로 인해 할당된 리소스의 양의 기반으로 처리되기 때문입니다.  
+HAProxy는 HTTP/2 스트림을 처리할 때, 스트림 개수 기반이 아닌 스트림으로 인해 할당된 **리소스** 양의 기반으로 처리되기 때문입니다.  
 따라서 스트림으로 인해 리소스를 많이 할당하게 되면, 새로운 스트림 생성은 보류되어 HAProxy가 다운되지 않습니다.
 
 ### IIS
 WIP
+
 #### Tomcat
 > Tomcat 8.5.94, 9.0.81, 10.1.14 버전 이상으로 업데이트 합니다.
-톰캣은 웹서버는 아니지만, 톰캣으로 HTTP2를 사용하는 경우 영향을 받습니다.
+톰캣도 HTTP2를 지원하고 있기 때문에, 만약 톰캣에서 HTTP2를 사용한다면 영향을 받습니다.(사용하는 경우가 드물긴 함)
+상기 권장하는 버전 이상으로 업데이트 하면 됩니다.  
+
+업데이트하기 어려운 경우, `maxConcurrentStreams` 값을 100 이하로 낮추어서 완화할 수 있으나, 버전 업데이트를 권장합니다.  
+`<UpgradeProtocol className="org.apache.coyote.http2.Http2Protocol" maxConcurrentStreams="20" />`  
+
+[참고 링크](https://tomcat.apache.org/tomcat-10.1-doc/config/http2.html)
+[패치 Commit](https://github.com/apache/tomcat/commit/9cdfe25bad707f34b3e5da2994f3f1952a163c3e)
 
 
 ## 결론
