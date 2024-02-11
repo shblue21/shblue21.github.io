@@ -10,7 +10,7 @@ tags:
 toc: true  
 lang: ko
 published: true
-description: 2023년 8월 발견된 HTTP/2 프로토콜의 Rapid Reset 취약점을 이용한 대규모 DDoS 공격에 대한 심층 분석과 방어 전략을 제공합니다. Cloudflare, Google Cloud Platform, AWS, Azure와 같은 주요 퍼블릭 클라우드 제공자들의 대응 방법, 공격 원리 및 웹 서버별 대응 방안을 상세히 설명하여 웹 보안 전문가 및 개발자들이 이 새로운 위협으로부터 시스템을 보호할 수 있는 지식을 제공합니다,
+description: 2023년 8월 발생한 HTTP/2 Rapid Reset 취약점을 이용한 DDoS 공격 분석과 Cloudflare, GCP, AWS 등 대응 방법, 웹 서버별 방어 전략을 소개합니다.
 keywords: HTTP/2 Rapid Reset 취약점, DDoS 공격 분석, 웹 보안 방어 전략, Cloudflare, GCP, AWS, Azure 대응, RST_STREAM 공격 방법, 웹 서버 취약점 대응, HTTP/2 프로토콜 보안, 공격 대응 기술, 웹 서버 패치 가이드, 멀티플렉싱 HTTP/2
 ---
 2023년 8월부터 퍼블릭 클라우드 제공자들은 HTTP/2 프로토콜의 취약점인 Rapid Reset을 악용한 대규모 분산 서비스 거부(DDoS) 공격을 보고했습니다.  
