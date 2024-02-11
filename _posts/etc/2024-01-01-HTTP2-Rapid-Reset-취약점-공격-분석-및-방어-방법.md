@@ -1,7 +1,7 @@
 ---
 title: HTTP2 Rapid Reset 취약점 공격 분석 및 방어 방법
 date: 2024-01-01T09:00:00
-last_modified_at: 2024-01-01T09:00:00
+last_modified_at: 2024-02-10T09:00:00
 categories:
   - etc
 tags:
@@ -189,7 +189,10 @@ HAProxy는 HTTP/2 스트림을 처리할 때, 스트림 개수 기반이 아닌 
 따라서 스트림으로 인해 리소스를 많이 할당하게 되면, 새로운 스트림 생성은 보류되어 HAProxy가 다운되지 않습니다.
 
 ### IIS
-WIP
+아래 링크를 참고하여 HTTP2를 비활성화 하거나 보안 업데이트를 적용하면 됩니다.  
+[Microsoft 취약점 링크](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-44487)
+1. Regedit을 열고 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\HTTP\Parameters`로 이동합니다.  
+2. `EnableHttp2Tls`, `EnableHttp2Cleartext` 값을 0으로 변경합니다.
 
 #### Tomcat
 > Tomcat 8.5.94, 9.0.81, 10.1.14 버전 이상으로 업데이트 합니다.
@@ -204,13 +207,14 @@ WIP
 
 
 ## 결론
-그래서 HTTP2는 위험한게 아닌가? HTTP1.1을 사용해야 하는거 아닌가? 라는 의문이 드실 수 있습니다.  
-해외 커뮤니티에서도 많은 의견이 오갑니다. 근간이 되는 프로토콜은 구현이 작아야 한다는 의견도 있고,(다만 HTTP2는 충분히 작다고 생각합니다.),  프로토콜의 개선은 웹에서 더 많은 광고를 보여주기 위한 것이라는 재밌는 의견도 있습니다.
+보안은 지속적인 노력과 업데이트를 필요로 하는 분야입니다. 따라서, 개발자와 시스템 관리자는 이와 같은 취약점에 대한 최신 정보를 주시하고, 적절한 보안 조치를 신속하게 적용하여 시스템을 안전하게 유지해야 합니다. 또한, 이러한 공격 사례는 새로운 보안 위협에 대응하기 위한 기술과 지식의 발전을 촉진하는 중요한 계기가 됩니다.  
+
+결론적으로, HTTP/2 프로토콜은 그 자체로 위험한 것이 아니라, 이를 구현하고 사용하는 과정에서 발생할 수 있는 보안 취약점에 주의를 기울여야 합니다. 따라서, 새로운 기술을 도입할 때는 그 기술의 보안 측면을 충분히 고려하고, 적극적인 보안 대책을 마련하는 것이 필수적입니다. 이 글이 제공하는 분석과 대응 방안이 HTTP/2를 사용하는 모든 이들에게 유용한 지침이 되길 바랍니다.
 
 
 ## 참고 자료
 - https://www.apachelounge.com/changelog-2.4.html
-<!-- - https://news.ycombinator.com/item?id=37861589 -->
-<!-- - https://community.centminmod.com/threads/nginx-1-25-3-release-for-http-2-rapid-reset-ddos-attack-vulnerability-cve-2023-44487.24186/ -->
-<!-- https://blog.litespeedtech.com/2023/10/11/rapid-reset-http-2-vulnerablilty/ -->
-<!-- https://news.ycombinator.com/item?id=37830987 -->
+- https://news.ycombinator.com/item?id=37861589
+- https://community.centminmod.com/threads/nginx-1-25-3-release-for-http-2-rapid-reset-ddos-attack-vulnerability-cve-2023-44487.24186/
+- https://blog.litespeedtech.com/2023/10/11/rapid-reset-http-2-vulnerablilty/
+- https://news.ycombinator.com/item?id=37830987
