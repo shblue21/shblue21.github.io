@@ -12,7 +12,6 @@ tags:
 toc: true  
 lang: en
 ---
-> ❗ Translations provided by machine translation.  
 
 > 'client.authentication.k8s.io/v1alpha1' has been removed and must be changed to 'v1beta1'.
 

@@ -11,7 +11,6 @@ toc: true
 keywords: Kubernetes, CKA, CKAD, CKS, exam, refund, cancelation
 description: How to refund Kubernetes(CKA,CKAD,CKS) exams
 ---
-> ❗ Translations provided by machine translation.  
 
 > You can get a refund from [Customer Support](https://pages.awscloud.com/GLOBAL-ln-GC-TrainCert-Cloud-Practitioner-Challenge-2022-reg.html) within **3 business days**.
 

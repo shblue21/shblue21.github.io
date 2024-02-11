@@ -14,7 +14,6 @@ description: How to resolve the Connector Failed to Start error when using the V
 ---
 > Ihis Issue is resolved in the latest version of the extension: [link](https://github.com/redhat-developer/rsp-server-community/issues/152)  
 
-> ❗ Translations provided by machine translation.  
 
 ## TL;DR
 Sets the java home (rsp-ui.rsp.java.home) of the Remote Server Protocol UI extension.  

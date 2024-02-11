@@ -11,7 +11,6 @@ toc: true
 lang: en
 ---
 
-> ❗ Translations provided by machine translation.  
 > Amazon Linux 2022 has been renamed.
 > changed to AL2022 -> AL2023 on March 2. The release cycle also changed to every two years starting in 2023.
 

@@ -11,7 +11,6 @@ toc: true
 lang: ko
 ---
 
-> ❗ Translations provided by machine translation.  
 
 A few days ago I posted about RC for Amazon Linux 2023.  
 Today it was officially released.  

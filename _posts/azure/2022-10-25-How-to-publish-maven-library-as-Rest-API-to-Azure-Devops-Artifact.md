@@ -12,7 +12,6 @@ published: true
 description: This document describes how to publish with Rest API for Azure Artifact Maven Feed.
 keywords: Azure, Azure Devops, Maven, Rest API, Publish, Java SDK, Azure Devops SDK, Azure Artifact, Azure Devops Artifact
 ---
-> ❗ Translations provided by machine translation.  
 > Note: This is the method officially supported by Azure devops.
 
 Azure Devops is a great Devops tool. It provides almost free support to many open source projects.  
