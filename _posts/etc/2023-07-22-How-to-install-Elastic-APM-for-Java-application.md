@@ -8,7 +8,9 @@ tags:
   - ElasticSearch
   - APM
 lang: ko
-toc: true  
+toc: true
+description: Guide to installing Elastic APM for Java apps, setup APM server, configure agents, and monitor performance efficiently.
+keywords: Elastic APM, ElasticSearch, APM Server, Java, Application Performance Monitoring, APM Agent, JVM, Kibana, Elastic Cloud, Managed Elastic Search
 ---
 # Introduction
 Elastic APM is a valuable tool for monitoring the performance of your applications. In this tutorial, we will walk you through the steps required to install and configure Elastic APM for a Java application.
