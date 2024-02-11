@@ -9,6 +9,8 @@ tags:
   - Copilot
 toc: true  
 lang: ko
+description: "Copilot Chat 리뷰: GitHub의 AI 코딩 도우미 기능, 설치 방법 및 개발자 생산성에 미치는 영향을 탐구"
+keywords: Copilot Chat, Github, OpenAI, 깃헙, AI, 코딩 도우미, 개발자, 생산성
 ---
 올해 2023년 3월 말에 Copilot X가 공개되었습니다.  
 Copliot Chat, Copilot Docs, Copliot CLI등 여러 서비스로 나뉘어 공개되었는데,  

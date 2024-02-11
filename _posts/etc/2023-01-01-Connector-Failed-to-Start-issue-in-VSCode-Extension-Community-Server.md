@@ -9,6 +9,8 @@ tags:
   - Tomcat
 toc: true  
 lang: en
+keywords: VSCode, Remote Server Protocol, Connector Failed to Start, RSP, Java Home, Extension, Error
+description: How to resolve the Connector Failed to Start error when using the VSCode Remote Server Protocol UI extension, specifying the java home setting (rsp-ui.rsp.java.home) to resolve the issue and detailed instructions on how to set it up
 ---
 > Ihis Issue is resolved in the latest version of the extension: [link](https://github.com/redhat-developer/rsp-server-community/issues/152)  
 

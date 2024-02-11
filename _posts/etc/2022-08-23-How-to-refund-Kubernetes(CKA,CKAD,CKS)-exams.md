@@ -8,6 +8,8 @@ tags:
   - Kubernetes
 lang: en
 toc: true  
+keywords: Kubernetes, CKA, CKAD, CKS, exam, refund, cancelation
+description: How to refund Kubernetes(CKA,CKAD,CKS) exams
 ---
 > ❗ Translations provided by machine translation.  
 

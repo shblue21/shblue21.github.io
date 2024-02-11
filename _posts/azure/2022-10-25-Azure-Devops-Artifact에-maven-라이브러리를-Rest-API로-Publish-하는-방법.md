@@ -9,6 +9,8 @@ tags:
 toc: true  
 lang: ko  
 published: true
+description: Azure Devops Artifact에 Maven 라이브러리를 REST API로 배포하는 방법 및 Java SDK 사용법을 설명합니다.
+keywords: Azure, Azure Devops, Maven, Rest API, Publish, Java SDK, Azure Devops SDK, Azure Artifact, Azure Devops Artifact
 ---
 > 주의: Azure devops 에서 공식적으로 지원하는 방법은 아닙니다.
 

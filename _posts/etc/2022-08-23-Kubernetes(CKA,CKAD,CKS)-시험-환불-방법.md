@@ -8,6 +8,8 @@ tags:
   - Kubernetes
 lang: ko
 toc: true  
+keywords: Kubernetes, CKA, CKAD, CKS, 시험, 환불, 취소, Refund, Cancelation
+description: Kubernetes(CKA,CKAD,CKS) 시험 환불 방법
 ---
 > [Customer Support](https://pages.awscloud.com/GLOBAL-ln-GC-TrainCert-Cloud-Practitioner-Challenge-2022-reg.html)에서 **3영업일** 내에 Refund 받을 수 있습니다.
 
