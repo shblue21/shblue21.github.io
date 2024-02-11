@@ -36,6 +36,7 @@ WIP
   - NAVER Cloud PlatformCertified Professional(NCA-200)
   - NAVER Cloud Platform Associate(NCA-100)
 - Etc Certification
+  - [Certified Kubernetes Administrator (CKA)](https://www.credly.com/badges/a37e2b76-324a-4dd5-b92c-d131aeef940e)
   - [Certified Kubernetes Application Developer (CKAD)](https://www.credly.com/badges/0c7a7264-dbc4-47cb-bfb0-4ae2bb754c6f)
   - [Terraform Associate](https://www.credly.com/badges/e5375dbe-6264-4871-b657-ad94708709e8)
 
