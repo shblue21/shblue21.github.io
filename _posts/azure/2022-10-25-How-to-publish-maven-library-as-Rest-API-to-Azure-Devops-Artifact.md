@@ -1,7 +1,7 @@
 ---
 title: How to publish maven library as Rest API to Azure Devops Artifact
 date: 2022-10-25T00:20:02
-last_modified_at: 2022-10-26T00:20:02
+last_modified_at: 2025-03-06T00:00:00
 categories:
   - azure
 tags:
@@ -12,7 +12,7 @@ published: true
 description: This document describes how to publish with Rest API for Azure Artifact Maven Feed.
 keywords: Azure, Azure Devops, Maven, Rest API, Publish, Java SDK, Azure Devops SDK, Azure Artifact, Azure Devops Artifact
 ---
-> Note: This is the method officially supported by Azure devops.
+> Note: This is not an officially supported method by Azure devops.
 
 Azure Devops is a great Devops tool. It provides almost free support to many open source projects.  
 
