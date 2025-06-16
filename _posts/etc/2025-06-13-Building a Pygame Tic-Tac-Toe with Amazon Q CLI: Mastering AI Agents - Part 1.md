@@ -73,13 +73,14 @@ To move beyond *text answers* and actually edit code or deploy systems, an agent
 
 ## Q CLI Installation & Usage
 
-![Amazon Q CLI](../../img/250613_qcli_1.png){: .align-center}
+![Amazon Q CLI](../../img/250613_qcli_1.png){: .align-center}{: width="80%" height="80%"}  
+
 **Amazon Q CLI** is a terminal‑based AI agent that automates development tasks like code generation, refactoring, testing, and deployment through conversational prompts. It understands hundreds of CLI tools such as `git`, `docker`, and `aws`, and even suggests execution plans.
 
 Installation is straightforward with the official installer — see the [installation guide](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing.html). For Windows you can run it inside WSL; refer to the [Windows guide](https://dev.to/aws/the-essential-guide-to-installing-amazon-q-developer-cli-on-windows-lmh).
 
 Because it must run inside WSL on Windows, the experience there can be a bit cumbersome.
 
-![Autocomplete inside the terminal](../../img/250613_qcli_2.png){: .align-center}
+![Autocomplete inside the terminal](../../img/250613_qcli_2.png){: .align-center}{: width="80%" height="80%"}  
 
 On macOS, enabling *Shell Integration* unlocks handy features like inline command autocompletion.

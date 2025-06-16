@@ -74,7 +74,7 @@ AI 에이전트가 **“텍스트 답변”** 수준을 넘어 실제 코드를 
 
 
 ## Q CLI 설치 및 사용방법
-![Amazon Q CLI](../../img/250613_qcli_1.png){: .align-center}
+![Amazon Q CLI](../../img/250613_qcli_1.png){: .align-center}{: width="80%" height="80%"}  
 **Amazon Q CLI**는 터미널에서 실행되는 AI 에이전트 입니다.  
 대화형 프롬프트를 통해 코드 생성·리팩터링·테스트·배포 같은 개발 업무를 자동화하며,  수백 가지 CLI(예: `git`, `docker`, `aws`) 명령을 이해하고 실행 계획까지 제안합니다.  
 
@@ -83,6 +83,6 @@ AI 에이전트가 **“텍스트 답변”** 수준을 넘어 실제 코드를 
 
 WSL에서 터미널 형식으로 사용해야 하므로 윈도우 환경에서는 사용이 불편합니다.  
 
-![터미널에서 자동완성 제공](../../img/250613_qcli_2.png){: .align-center}  
+![터미널에서 자동완성 제공](../../img/250613_qcli_2.png){: .align-center}{: width="80%" height="80%"}  
 
 맥환경에서는 Shell Integration을 하면 터미널 자동완성등 유용한 기능을 사용할 수 있습니다.
